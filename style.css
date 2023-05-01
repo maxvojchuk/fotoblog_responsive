@@ -46,9 +46,12 @@ body {
   margin-right: 65px;
   margin-bottom: 130px;
 }
+/* Прибираємо нижній відступ в двох останніх кардках */
 .card:nth-last-child(-n + 2) {
   margin-bottom: 0;
 }
+
+/* Прибираємо зайві відступи в inline елементів, та прибираємо правий відступ в кожної другої картки */
 .card:nth-child(2n) {
   margin-left: -4px;
   margin-right: 0;
@@ -73,12 +76,14 @@ body {
   font-weight: 400;
   margin-bottom: 40px;
 }
+
+/* Стилі для кнопки */
 .main-button {
   display: block;
   margin: 90px auto 0;
   height: 60px;
   width: 165px;
-  background-color: #fff;
+  background-color: #ffffff;
   font-family: "Playfair Display";
   font-weight: 400;
   font-size: 14px;

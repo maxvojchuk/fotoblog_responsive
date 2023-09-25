@@ -12,50 +12,36 @@ body {
 }
 /* Шапка сайту */
 .header {
-  height: 182px;
-  padding-top: 71px;
+  padding: 70px 0;
 }
 .header-nav {
   margin: 0 auto;
   width: 555px;
 }
-.header-nav-list {
-  list-style: none;
-}
-.header-nav-list > li {
-  display: inline-block;
-}
-.header-nav-list > li:not(:last-child) {
-  margin-right: 100px;
-}
+
 /* Видалення зайвих відступів між елементами inline-block */
-.header-nav-list > li:not(:first-child) {
-  margin-left: -4px;
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 100px;
 }
-.header-nav-list > li > a {
+.header-nav-link {
   color: #7d7d7d;
-  text-decoration: none;
 }
-.header-nav-list > li > a:hover {
+.header-nav-link:hover {
   color: #03a9f4;
 }
 /* Основна части сайту */
-.card {
-  display: inline-block;
-  width: 420px;
-  margin-right: 65px;
-  margin-bottom: 130px;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 65px;
+  row-gap: 130px;
 }
-/* Прибираємо нижній відступ в двох останніх кардках */
-.card:nth-last-child(-n + 2) {
-  margin-bottom: 0;
+.card {
+  flex-basis: 420px;
 }
 
-/* Прибираємо зайві відступи в inline елементів, та прибираємо правий відступ в кожної другої картки */
-.card:nth-child(2n) {
-  margin-left: -4px;
-  margin-right: 0;
-}
 .card-category {
   font-family: "Ubuntu";
   font-weight: 300;

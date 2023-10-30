@@ -1,0 +1,21 @@
+/* Шапка сайту */
+.header {
+  padding: 70px 0;
+}
+.header-nav {
+  margin: 0 auto;
+  width: 555px;
+}
+
+/* Видалення зайвих відступів між елементами inline-block */
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.header-nav-link {
+  color: $colorTextMenu;
+}
+.header-nav-link:hover {
+  color: $colorTextHover;
+}

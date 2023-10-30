@@ -1,3 +1,18 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Базові стилі для тексту */
 body {
   font-family: "Playfair Display", serif;
@@ -6,14 +21,12 @@ body {
   font-weight: 400;
   color: #626262;
 }
-.wrapper {
-  width: 906px;
-  margin: 0 auto;
-}
+
 /* Шапка сайту */
 .header {
   padding: 70px 0;
 }
+
 .header-nav {
   margin: 0 auto;
   width: 555px;
@@ -25,19 +38,29 @@ body {
   align-items: center;
   gap: 100px;
 }
+
 .header-nav-link {
   color: #7d7d7d;
 }
+
 .header-nav-link:hover {
   color: #03a9f4;
 }
+
+.wrapper {
+  width: 906px;
+  margin: 0 auto;
+}
+
 /* Основна части сайту */
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 65px;
+  -moz-column-gap: 65px;
+       column-gap: 65px;
   row-gap: 130px;
 }
+
 .card {
   flex-basis: 420px;
 }
@@ -52,10 +75,12 @@ body {
 .card-img {
   margin-bottom: 32px;
 }
+
 .card-category {
   display: block;
   margin-bottom: 32px;
 }
+
 .card-title {
   font-size: 30px;
   line-height: 40px;

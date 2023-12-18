@@ -13,102 +13,144 @@
     <link rel="stylesheet" href="/src/css/main.css" />
   </head>
   <body>
-    <!-- Обмежувальний контейнер -->
-    <div class="wrapper">
-      <!-- Шапка сайту -->
-      <header class="header">
+    <!-- Шапка сайту -->
+    <header class="header">
+      <div class="header__container">
         <!-- Меню навігації -->
-        <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item">
-              <a class="header-nav-link" href="">LIFESTYLE</a>
+        <nav class="header__nav nav" data-menu>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="">LIFESTYLE</a>
             </li>
-            <li class="header-nav-item">
-              <a class="header-nav-link" href="">PHOTODIARY</a>
+            <li class="nav__item">
+              <a class="nav__link" href="">PHOTODIARY</a>
             </li>
-            <li class="header-nav-item">
-              <a class="header-nav-link" href="">MUSIC</a>
+            <li class="nav__item">
+              <a class="nav__link" href="">MUSIC</a>
             </li>
-            <li class="header-nav-item">
-              <a class="header-nav-link" href="">TRAVEL</a>
+            <li class="nav__item">
+              <a class="nav__link" href="">TRAVEL</a>
             </li>
           </ul>
+          <button class="nav__button btn-menu" data-open_btn>
+            <span class="btn-menu__icon"></span>
+          </button>
         </nav>
-      </header>
-      <!-- Основна частина -->
-      <main class="main">
-        <!-- Контейнер для карток -->
-        <div class="card-container">
-          <article class="card">
-            <img src="/src/img/1.png" alt="LIFESTYLE_foto" class="card-img" />
-            <span class="card-category">LIFESTYLE</span>
-            <h2 class="card-title">More than just a music festival</h2>
-            <p class="card-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              iste? Tempore nulla sit praesentium necessitatibus ipsum aliquam
-              saepe, amet quidem vero vel perspiciatis aperiam nisi ab odio eius
-              beatae aspernatur!
-            </p>
-          </article>
-          <article class="card">
-            <img src="/src/img/2.png" alt="LIFESTYLE_foto" class="card-img" />
-            <span class="card-category">LIFESTYLE</span>
-            <h2 class="card-title">Life tastes better with coffee</h2>
-            <p class="card-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              iste? Tempore nulla sit praesentium necessitatibus ipsum aliquam
-              saepe, amet quidem vero vel perspiciatis aperiam nisi ab odio eius
-              beatae aspernatur!
-            </p>
-          </article>
-          <article class="card">
-            <img src="src/img/3.png" alt="PHOTODAIRY_foto" class="card-img" />
-            <span class="card-category">PHOTODAIRY</span>
-            <h2 class="card-title">American dream</h2>
-            <p class="card-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              iste? Tempore nulla sit praesentium necessitatibus ipsum aliquam
-              saepe, amet quidem vero vel perspiciatis aperiam nisi ab odio eius
-              beatae aspernatur!
-            </p>
-          </article>
-          <article class="card">
-            <img src="src/img/4.png" alt="PHOTODAIRY_foto" class="card-img" />
-            <span class="card-category">PHOTODAIRY</span>
-            <h2 class="card-title">A day exploring the Alps</h2>
-            <p class="card-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              iste? Tempore nulla sit praesentium necessitatibus ipsum aliquam
-              saepe, amet quidem vero vel perspiciatis aperiam nisi ab odio eius
-              beatae aspernatur!
-            </p>
-          </article>
-          <article class="card">
-            <img src="src/img/5.png" alt="LIFESTYLE_foto" class="card-img" />
-            <span class="card-category">LIFESTYLE</span>
-            <h2 class="card-title">Top 10 song for running</h2>
-            <p class="card-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              iste? Tempore nulla sit praesentium necessitatibus ipsum aliquam
-              saepe, amet quidem vero vel perspiciatis aperiam nisi ab odio eius
-              beatae aspernatur!
-            </p>
-          </article>
-          <article class="card">
-            <img src="src/img/6.png" alt="LIFESTYLE_foto" class="card-img" />
-            <span class="card-category">LIFESTYLE</span>
-            <h2 class="card-title">Cold winter days</h2>
-            <p class="card-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              iste? Tempore nulla sit praesentium necessitatibus ipsum aliquam
-              saepe, amet quidem vero vel perspiciatis aperiam nisi ab odio eius
-              beatae aspernatur!
-            </p>
-          </article>
+      </div>
+    </header>
+    <!-- Основна частина -->
+    <main class="main">
+      <section class="fotoblog">
+        <div class="fotoblog__container container">
+          <div class="fotoblog__items">
+            <article class="fotoblog__item fotocard">
+              <div class="fotocard__foto">
+                <img
+                  src="/src/img/1.jpg"
+                  alt="LIFESTYLE_foto"
+                  class="fotocard__img"
+                />
+              </div>
+              <span class="fotocard__category">LIFESTYLE</span>
+              <h2 class="fotocard__title">More than just a music festival</h2>
+              <p class="fotocard__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Ratione, iste? Tempore nulla sit praesentium necessitatibus
+                ipsum aliquam saepe, amet quidem vero vel perspiciatis aperiam
+                nisi ab odio eius beatae aspernatur!
+              </p>
+            </article>
+            <article class="fotoblog__item fotocard">
+              <div class="fotocard__foto">
+                <img
+                  src="/src/img/2.jpg"
+                  alt="LIFESTYLE_foto"
+                  class="fotocard__img"
+                />
+              </div>
+              <span class="fotocard__category">LIFESTYLE</span>
+              <h2 class="fotocard__title">Life tastes better with coffee</h2>
+              <p class="fotocard__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Ratione, iste? Tempore nulla sit praesentium necessitatibus
+                ipsum aliquam saepe, amet quidem vero vel perspiciatis aperiam
+                nisi ab odio eius beatae aspernatur!
+              </p>
+            </article>
+            <article class="fotoblog__item fotocard">
+              <div class="fotocard__foto">
+                <img
+                  src="/src/img/3.jpg"
+                  alt="PHOTODAIRY_foto"
+                  class="fotocard__img"
+                />
+              </div>
+              <span class="fotocard__category">PHOTODAIRY</span>
+              <h2 class="fotocard__title">American dream</h2>
+              <p class="fotocard__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Ratione, iste? Tempore nulla sit praesentium necessitatibus
+                ipsum aliquam saepe, amet quidem vero vel perspiciatis aperiam
+                nisi ab odio eius beatae aspernatur!
+              </p>
+            </article>
+            <article class="fotoblog__item fotocard">
+              <div class="fotocard__foto">
+                <img
+                  src="/src/img/4.jpg"
+                  alt="PHOTODAIRY_foto"
+                  class="fotocard__img"
+                />
+              </div>
+              <span class="fotocard__category">PHOTODAIRY</span>
+              <h2 class="fotocard__title">A day exploring the Alps</h2>
+              <p class="fotocard__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Ratione, iste? Tempore nulla sit praesentium necessitatibus
+                ipsum aliquam saepe, amet quidem vero vel perspiciatis aperiam
+                nisi ab odio eius beatae aspernatur!
+              </p>
+            </article>
+            <article class="fotoblog__item fotocard">
+              <div class="fotocard__foto">
+                <img
+                  src="/src/img/5.jpg"
+                  alt="LIFESTYLE_foto"
+                  class="fotocard__img"
+                />
+              </div>
+              <span class="fotocard__category">LIFESTYLE</span>
+              <h2 class="fotocard__title">Top 10 song for running</h2>
+              <p class="fotocard__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Ratione, iste? Tempore nulla sit praesentium necessitatibus
+                ipsum aliquam saepe, amet quidem vero vel perspiciatis aperiam
+                nisi ab odio eius beatae aspernatur!
+              </p>
+            </article>
+            <article class="fotoblog__item fotocard">
+              <div class="fotocard__foto">
+                <img
+                  src="/src/img/6.jpg"
+                  alt="LIFESTYLE_foto"
+                  class="fotocard__img"
+                />
+              </div>
+              <span class="fotocard__category">LIFESTYLE</span>
+              <h2 class="fotocard__title">Cold winter days</h2>
+              <p class="fotocard__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Ratione, iste? Tempore nulla sit praesentium necessitatibus
+                ipsum aliquam saepe, amet quidem vero vel perspiciatis aperiam
+                nisi ab odio eius beatae aspernatur!
+              </p>
+            </article>
+          </div>
         </div>
         <!-- Кнопка завантаження -->
-        <button class="main-button">Load more</button>
-      </main>
-    </div>
+        <button class="main__button button">Load more</button>
+      </section>
+    </main>
+    <script src="./src/js/mobile-menu.js"></script>
   </body>
 </html>

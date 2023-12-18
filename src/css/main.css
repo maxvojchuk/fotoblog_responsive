@@ -13,6 +13,83 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+.nav__button {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .btn-menu {
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: relative;
+  }
+  .btn-menu__icon,
+  .btn-menu__icon::before,
+  .btn-menu__icon::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    background-color: #333;
+    transition: transform 0.3s ease-in 0.3s, top 0.2s ease-in;
+  }
+  .btn-menu__icon {
+    top: calc(50% - 1px);
+  }
+  .btn-menu__icon::before {
+    top: -10px;
+  }
+  .btn-menu__icon::after {
+    top: 10px;
+  }
+  .nav__list {
+    display: none;
+  }
+  .menu-open .btn-menu__icon::before,
+  .menu-open .btn-menu__icon::after {
+    top: 0;
+  }
+  .menu-open .btn-menu__icon {
+    transform: rotate(-45deg);
+  }
+  .menu-open .btn-menu__icon::after {
+    transform: rotate(90deg);
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    row-gap: 10px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+  }
+  .menu-open .nav__list {
+    transform: translateX(0);
+    justify-content: center;
+    align-items: center;
+    row-gap: 25px;
+  }
+  .nav__link {
+    font-size: 32px;
+  }
+}
 /* Базові стилі для тексту */
 body {
   font-family: "Playfair Display", serif;
@@ -22,74 +99,132 @@ body {
   color: #626262;
 }
 
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
 /* Шапка сайту */
 .header {
-  padding: 70px 0;
+  padding: 40px 0;
 }
 
-.header-nav {
-  margin: 0 auto;
-  width: 555px;
+.header__container {
+  padding: 0 20px;
 }
 
-/* Видалення зайвих відступів між елементами inline-block */
-.header-nav-list {
+.nav__list {
   display: flex;
   align-items: center;
-  gap: 100px;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.header-nav-link {
+.nav__link {
   color: #7d7d7d;
 }
-
-.header-nav-link:hover {
+.nav__link:hover {
   color: #03a9f4;
 }
 
-.wrapper {
-  width: 906px;
-  margin: 0 auto;
+@media (min-width: 768px) {
+  .header {
+    padding: 55px 0;
+  }
+  .header__container {
+    padding: 0;
+  }
+  .header__nav {
+    max-width: 555px;
+    margin: 0 auto;
+  }
+  .nav__list {
+    justify-content: center;
+    gap: 50px;
+  }
 }
-
+@media (min-width: 1200px) {
+  .header {
+    padding: 70px 0;
+  }
+  .nav__list {
+    gap: 100px;
+  }
+}
 /* Основна части сайту */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 65px;
-       column-gap: 65px;
-  row-gap: 130px;
+.fotoblog__container {
+  padding: 0 20px;
 }
 
-.card {
-  flex-basis: 420px;
+.fotoblog__item {
+  margin-bottom: 32px;
 }
 
-.card-category {
+.fotoblog__item:last-child {
+  margin-bottom: 0;
+}
+
+.fotocard__foto {
+  margin-bottom: 20px;
+}
+
+.fotocard__category {
+  display: block;
+  margin-bottom: 20px;
   font-family: "Ubuntu";
   font-weight: 300;
   line-height: 16px;
   color: #b4ad9e;
 }
 
-.card-img {
-  margin-bottom: 32px;
-}
-
-.card-category {
-  display: block;
-  margin-bottom: 32px;
-}
-
-.card-title {
+.fotocard__title {
   font-size: 30px;
   line-height: 40px;
   font-weight: 400;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
+@media (min-width: 768px) {
+  .fotoblog__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    -moz-column-gap: 65px;
+         column-gap: 65px;
+    row-gap: 130px;
+  }
+  .fotoblog__item {
+    flex-basis: calc((100% - 65px) / 2);
+    margin-bottom: 0;
+  }
+  .fotocard__foto {
+    margin-bottom: 62px;
+  }
+  .fotocard__category {
+    margin-bottom: 32px;
+  }
+  .fotocard__title {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .fotoblog__container {
+    padding: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .fotoblog__item {
+    flex-basis: calc((100% - 130px) / 3);
+  }
+}
 /* Стилі для кнопки */
-.main-button {
+.main__button {
   display: block;
   margin: 90px auto 0;
   height: 60px;
@@ -99,5 +234,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
+  border: 1px solid #626262;
   color: #626262;
 }

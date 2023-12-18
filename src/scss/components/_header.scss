@@ -1,21 +1,46 @@
 /* Шапка сайту */
 .header {
-  padding: 70px 0;
+  padding: 40px 0;
 }
-.header-nav {
-  margin: 0 auto;
-  width: 555px;
+.header__container {
+  padding: 0 20px;
 }
 
-/* Видалення зайвих відступів між елементами inline-block */
-.header-nav-list {
+// Меню навігації
+.nav__list {
   display: flex;
   align-items: center;
-  gap: 100px;
+  justify-content: space-between;
+  gap: 10px;
 }
-.header-nav-link {
+.nav__link {
   color: $colorTextMenu;
+  &:hover {
+    color: $colorTextHover;
+  }
 }
-.header-nav-link:hover {
-  color: $colorTextHover;
+
+@media (min-width: 768px) {
+  .header {
+    padding: 55px 0;
+  }
+  .header__container {
+    padding: 0;
+  }
+  .header__nav {
+    max-width: 555px;
+    margin: 0 auto;
+  }
+  .nav__list {
+    justify-content: center;
+    gap: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    padding: 70px 0;
+  }
+  .nav__list {
+    gap: 100px;
+  }
 }

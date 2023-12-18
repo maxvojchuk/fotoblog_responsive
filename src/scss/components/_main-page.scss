@@ -1,42 +1,70 @@
-.wrapper {
-  width: 906px;
-  margin: 0 auto;
-}
-
 /* Основна части сайту */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 65px;
-  row-gap: 130px;
+
+.fotoblog__container {
+  padding: 0 20px;
 }
-.card {
-  flex-basis: 420px;
+.fotoblog__item {
+  margin-bottom: 32px;
+}
+.fotoblog__item:last-child {
+  margin-bottom: 0;
 }
 
-.card-category {
+.fotocard__foto {
+  margin-bottom: 20px;
+}
+
+.fotocard__category {
+  display: block;
+  margin-bottom: 20px;
   font-family: "Ubuntu";
   font-weight: 300;
   line-height: 16px;
   color: $colorTextCategory;
 }
 
-.card-img {
-  margin-bottom: 32px;
-}
-.card-category {
-  display: block;
-  margin-bottom: 32px;
-}
-.card-title {
+.fotocard__title {
   font-size: 30px;
   line-height: 40px;
   font-weight: 400;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .fotoblog__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 65px;
+    row-gap: 130px;
+  }
+  .fotoblog__item {
+    flex-basis: calc((100% - 65px) / 2);
+    margin-bottom: 0;
+  }
+  .fotocard__foto {
+    margin-bottom: 62px;
+  }
+  .fotocard__category {
+    margin-bottom: 32px;
+  }
+  .fotocard__title {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .fotoblog__container {
+    padding: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .fotoblog__item {
+    flex-basis: calc((100% - 130px) / 3);
+  }
 }
 
 /* Стилі для кнопки */
-.main-button {
+.main__button {
   display: block;
   margin: 90px auto 0;
   height: 60px;
@@ -46,5 +74,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
+  border: 1px solid $colorTextBase;
   color: $colorTextBase;
 }
